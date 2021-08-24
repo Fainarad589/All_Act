@@ -1,0 +1,16 @@
+$("body").on("change", "input#all_ACTIVE:checkbox", function (event)
+    {
+        event.preventDefault();
+        event.stopPropagation();
+        if ($(this).is(":checked"))
+        {
+            $("input.ACTIVE:checkbox")
+                .prop("checked", true)
+                .change();
+        } else
+        {
+            $("input.ACTIVE:checkbox")
+                .prop("checked", false)
+                .change();
+        }
+    });
